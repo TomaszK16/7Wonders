@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Siedem cudów świata - Galeria</title>
+		<meta charset="UTF-8">
+        <meta name="description" content="Strona przedstawia zdjęcia siedmiu wybranych cudów świata.">
+        <meta name="author" content="Tomasz Kośla">
+		<link rel="stylesheet" href="css/mainStyle.css">
+		<link rel="stylesheet" href="css/index.css">
+	</head>
+    <body>
+        <iframe class="background" src="https://www.youtube.com/embed/_-WWwNt8AzU?controls=0&autoplay=1&mute=1" SameSite="Lax" title="YouTube video player" frameborder="0"  allowfullscreen></iframe>
+        <header><span id="caption"></span></header>
+        <div id="menu">
+            <div class="menuCategory mCLeft mCChosen"><a href="index.html" class=hitbox>Galeria</a><hr class="chosen"></div>
+            <div class="menuCategory"><a href="more.html" class=hitbox>Siedem cudów</a></div>
+            <div class="menuCategory"><a href="survey.html" class=hitbox>Ankieta</a></div>
+            <div class="menuCategory mCRight">
+                <div class = "dropdown" >
+                    <div class = "hitbox" > Źródła ⌵ </div>
+                    <div class = "dropdown-content" >
+                        <ul>
+                            <li><a href = "https://www.britannica.com/list/new-seven-wonders-of-the-world" >Informacje</a></li>
+                            <li><a href = "https://pl.wikipedia.org/" >Więcej informacji</a></li>
+                            <li><a href = "https://www.youtube.com/embed/_-WWwNt8AzU?controls=0&autoplay=1&mute=1" >Tło galerii</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="galery">
+            <span class=title><br>GALERIA</span>
+            <ul>
+                <li>Kliknij na zdjęcie aby zobaczyć je w pełni.</li>
+                <li>Kliknij na tytuł aby dowiedzieć się więcej.</li>
+            </ul>
+            <table>
+                <tr>
+                    <td>
+                        <a href="more.html#China">Wielki Mur Chiński<br></a>
+                        <img src="images/Great_Wall_of_China.jpg" onclick="toggleBrowser(0)">
+                    </td>
+                    <td>
+                        <a href="more.html#Jordan">Petra<br></a>
+                        <img src="images/Petra.jpg" onclick="toggleBrowser(1)">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <a href="more.html#Mexico">Chichén Itzá<br></a>
+                        <img src="images/Chichen Itza.jpg" onclick="toggleBrowser(2)">
+                    </td>
+                    <td>
+                        <a href="more.html#India">Tadź Mahal<br></a>
+                        <img src="images/Taj Mahal.jpg" onclick="toggleBrowser(3)">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <a href="more.html#Brazil">Statua Chrystusa Zbawiciela<br></a>
+                        <img src="images/Christ.jpg" onclick="toggleBrowser(4)">
+                    </td>
+                    <td>
+                        <a href="more.html#Peru">Machu Picchu<br></a>
+                        <img src="images/Machu Picchu.jpg" onclick="toggleBrowser(5)">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <a href="more.html#Italy">Koloseum</a><br>
+                        <img src="images/Colosseum.jpg" onclick="toggleBrowser(6)">
+                    </td>
+                    <td>
+                        <a href="survey.html">Weź udział w krótkiej ankiecie:</a><br>
+                        <a href="survey.html"><img src="images/txt.png" id="survey"></a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div id="browser" class="browser">
+            <div id="browserContent">
+                <button onclick="toggleBrowser()" class="leaveBtn" id="leaveBtn"></button>
+                <button onclick="lastImage()" class="lastBtn"></button>
+                <img id="browserImage">
+                <button onclick="nextImage()" class="nextBtn"></button>
+            </div>
+        </div>
+
+        <script>
+            var slide = "0";
+            function toggleBrowser(input){
+                document.getElementById("browser").classList.toggle("display"); 
+                slide = input;
+                reloadImage();
+            }
+            function nextImage(){
+                slide++;
+                if(slide>6){slide=0}
+                reloadImage();
+            }
+            function lastImage(){
+                slide--;
+                if(slide<0){slide=6}
+                reloadImage();
+            }
+            function reloadImage(){
+                var display = document.getElementById("browserImage")
+                if(slide==0)display.src="images/Great_Wall_of_China.jpg";
+                else if(slide==1)display.src="images/Petra.jpg";
+                else if(slide==2)display.src="images/Chichen Itza.jpg";
+                else if(slide==3)display.src="images/Taj Mahal.jpg";
+                else if(slide==4)display.src="images/Christ.jpg";
+                else if(slide==5)display.src="images/Machu Picchu.jpg";
+                else if(slide==6)display.src="images/Colosseum.jpg";
+            }
+        </script>
+        <footer>
+            <hr><div class="contentBox">
+                Stronę wykonał <span class="redColor">Tomasz Kośla</span> z klasy <span class="redColor">1ta.</span>
+            </div><hr>
+        </footer>
+    </body>
+</html>

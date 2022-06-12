@@ -1,0 +1,79 @@
+#content{
+    position: relative;
+    top: 25vh;
+    margin: auto;
+    width: 50vw;
+    height: 130vh;
+    background-color: #292929;
+    box-sizing: border-box;
+
+    padding-top: 3vh;
+    text-align: center;
+    border-radius: 0 0 5vh 5vh;
+}
+
+footer{
+    top: 160vh;
+}
+
+.title {
+    font-size: 6vh;
+    font-variant: small-caps;
+    font-weight: bold;
+    color: #FFFFFF;
+}
+
+form .contentBox{
+    font-size: 3vh;
+    text-align: center;
+    color: #FFFFFF;
+    padding-top: 2vh;
+}
+
+form .contentBox .content{
+    width: fit-content;
+    margin: auto;
+    margin-top: 2vh;
+    
+    font-size: 2.5vh;
+    border-radius: 3vh;
+    padding: 2vh 5vh 2vh 5vh;
+    background-color: #101010;
+    text-align: left;
+}
+
+form select{
+    height: 5vh;
+    width: 7vw;
+    border-radius: 1vh 1vh 0 0;
+    border: solid #101010 0.5vh; 
+    font-size: 1.5vh;
+    text-align: center;
+    margin-top: 1vh;
+}
+
+form textarea{
+    height: 5vh;
+    width: 20vw;
+    border-radius: 1vh;
+    border: solid #101010 0.5vh;
+    font-size: 1.5vh; 
+    margin-top: 1vh;
+}
+
+input[type=submit], input[type=reset]{
+    width: 6vw;
+    height: 6vh;
+    font-weight: bold;
+    font-size: 1.5vh;
+    border-radius: 1vh;
+    border: solid #101010 0.5vh;
+}
+
+input[type=submit]{
+    background-color: #24d224;
+}
+
+input[type=reset]{
+    background-color: #ff3535;
+}

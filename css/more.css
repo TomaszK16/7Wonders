@@ -1,0 +1,45 @@
+.section{
+    position: relative;
+    margin: auto;
+    top: 25vh;
+    width: 77vw;
+    height: 45vh;
+}
+.bgBright{
+    background-color: white;
+}
+.bgDark{
+    background-color: #e7e7e7;
+}
+
+table{
+    border-collapse: collapse;
+    margin-left: 6vw;
+}
+tr,td{
+    width: 30vw;
+
+    font-size: 2vh;
+    font-weight: bold;
+}
+table img{
+    height: 30vh;
+    width: 24vw;
+    border-radius: 2.5vh;
+}
+table .image{
+    text-align: center;
+    padding-top: 7vh;
+}
+table .text{
+    vertical-align: top;
+    padding-left: 3vw;
+    padding-top: 8vh;
+}
+span.title{
+    font-size:4vh;
+}
+
+footer{
+    top: 341vh;
+}
