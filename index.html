@@ -105,14 +105,16 @@
                 reloadImage();
             }
             function reloadImage(){
-                var display = document.getElementById("browserImage")
-                if(slide==0)display.src="images/Great_Wall_of_China.jpg";
-                else if(slide==1)display.src="images/Petra.jpg";
-                else if(slide==2)display.src="images/Chichen Itza.jpg";
-                else if(slide==3)display.src="images/Taj Mahal.jpg";
-                else if(slide==4)display.src="images/Christ.jpg";
-                else if(slide==5)display.src="images/Machu Picchu.jpg";
-                else if(slide==6)display.src="images/Colosseum.jpg";
+                var images = [
+					"images/Great_Wall_of_China",
+					"images/Petra.jpg",
+					"iamges/Chichen Itza.jpg",
+    				"images/Taj Mahal.jpg",
+    				"images/Christ.jpg",
+    				"images/Machu Picchu.jpg",
+    				"images/Colosseum.jpg",
+				]
+				document.getElementById("browserImage").src=images[slide];
             }
         </script>
         <footer>
